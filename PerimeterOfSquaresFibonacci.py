@@ -12,3 +12,27 @@ returns the total perimeter of all the squares.
 perimeter(5)  should return 80
 perimeter(7)  should return 216
 '''
+
+def fibonacci_sum(fibonacci):
+    sum = 0
+    for i in fibonacci:
+        sum = sum + i
+    return sum
+
+def fibonacci_sequence(n):
+    fibonacci = [1,1]
+    for i in range(2,n+1):
+        x = fibonacci[i-2] + fibonacci[i-1]
+        fibonacci.append(x)
+    return fibonacci
+
+def perimeter_calculus(soma):
+    perimeter = 4*soma
+    return perimeter
+
+def perimeter(n):
+    if(n>=2):
+        fibonacci = fibonacci_sequence(n)
+        soma = fibonacci_sum(fibonacci)
+        perimeter = perimeter_calculus(soma)
+        return perimeter
