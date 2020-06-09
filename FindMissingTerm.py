@@ -1,4 +1,5 @@
 '''
+https://www.codewars.com/kata/52de553ebb55d1fca3000371
 An Arithmetic Progression is defined as one in which there is a constant 
 difference between the consecutive terms of a given series of numbers. You are provided with consecutive elements 
 of an Arithmetic Progression. There is however one hitch: exactly one term from the original series is missing from the 
