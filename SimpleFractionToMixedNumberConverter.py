@@ -38,7 +38,7 @@ def mixed_fraction(s):
     n,d = s.split('/')
     n = int(n)
     d = int(d)
-    if(n!=d):
+    if(n!=d and d!=0):
         if((n>0 and d>0) or (n<0 and d<0)):
             n = abs(n)
             d = abs(d)
@@ -53,7 +53,7 @@ def mixed_fraction(s):
                 return str(parte_inteira) + ' ' + str(fracao_simplificada_diferente)
             elif(parte_inteira == 0 and n<d):
                 return str(fracao_simplificada)
-        elif(n<0 and d>0 or n>0 and d<0):
+        elif((n<0 and d>0) or (n>0 and d<0)):
             n = -1* n
             d = -1*d
             resto_da_divisao = n%d
@@ -67,10 +67,10 @@ def mixed_fraction(s):
                 return str(-1 * parte_inteira) + ' ' + str(fracao_simplificada_diferente)
             elif(parte_inteira == 0 and n<d):
                 return str(-1 * fracao_simplificada)
-        elif(n==0 or d==0):
+        elif(n==0):
             return str(int(n/d)) 
     else:
-        if(n==0 and d ==0):
+        if(d==0):
             return str(int(n/d))
         else:
             return '1'
