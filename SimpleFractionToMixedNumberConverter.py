@@ -34,6 +34,7 @@ Make sure not to modify the input of your function in-place, it is a bad practic
 '''
 def mixed_fraction(s):
     from fractions import Fraction
+    print(s)
     n,d = s.split('/')
     n = int(n)
     d = int(d)
@@ -54,19 +55,7 @@ def mixed_fraction(s):
                 return str(fracao_simplificada)
         elif(n<0 and d>0 or n>0 and d<0):
             n = -1* n
-            resto_da_divisao = n%d
-            parte_inteira = n//d
-            quociente = n - (parte_inteira * d)
-            fracao_simplificada_diferente = Fraction(quociente,d)
-            fracao_simplificada = Fraction(n,d)
-            if(resto_da_divisao == 0):
-                return str(-1 * parte_inteira)
-            elif(resto_da_divisao!=0 and n>d):
-                return str(-1 * parte_inteira) + ' ' + str(fracao_simplificada_diferente)
-            elif(parte_inteira == 0 and n<d):
-                return str(-1 * fracao_simplificada)
-        elif():
-            d = -1* d
+            d = -1*d
             resto_da_divisao = n%d
             parte_inteira = n//d
             quociente = n - (parte_inteira * d)
